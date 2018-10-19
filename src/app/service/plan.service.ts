@@ -30,6 +30,24 @@ export class PlanService {
   }
 
 
+  getSearchUrl(city: string): string {
+    return this.baseUrl + "/" + city;
+  }
+
+  searchPlans(city: string): Observable<Plan[]> {
+    return this.http.get(this.getSearchUrl(city)).pipe(
+      map(data => data.json())
+    );
+  }
+
+
+  getPlanById(id: number): Observable<Plan> {
+    return this.http.get(this.getBaseUrlById(id)).pipe(
+      map(data => data.json())
+    );
+  }
+
+
   addPlan(plan: Plan): Observable<Plan> {
     return this.http.post(this.baseUrl, JSON.stringify(plan), this.getJsonContentTypeHeader()).pipe(
       map(data => data.json())

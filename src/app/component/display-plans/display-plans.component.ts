@@ -11,13 +11,34 @@ import { ActivatedRoute } from '@angular/router';
 export class DisplayPlansComponent implements OnInit {
 
   plans: Plan[];
+  planOffers:string;
 
-  constructor(private planService: PlanService, private activatedRoute: ActivatedRoute) { }
+  constructor(private planService: PlanService, private activatedRoute: ActivatedRoute) { 
+    this.planOffers="/assets/images/offerImg.png";
+  }
 
   ngOnInit() {
-    this.planService.getAllPlans().subscribe(
-      (data) => this.plans = data
+    
+
+    this.activatedRoute.queryParams.subscribe(
+      (params) =>{
+        let city = params['city'];
+        if(city){
+          this.planService.searchPlans(city).subscribe(
+            (data) => this.plans=data
+          );
+        }else{
+          this.planService.getAllPlans().subscribe(
+            (data) => this.plans = data
+          );
+        }
+      }
     );
+
+
+
+
+
   }
 
 }

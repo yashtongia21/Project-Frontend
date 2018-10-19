@@ -1,3 +1,4 @@
+<h3>Add Plans:</h3>
 <form class="form" #f="ngForm" novalidate (ngSubmit)="save()">
 
     <div>
@@ -14,12 +15,12 @@
 
     <div>
     <input type="text" class="form-control" id="pmu" name="pmu"
-    [(ngModel)]="plan.maxUsage" #pmu=ngModel placeholder="Max Usage" /> 
+    [(ngModel)]="plan.maxUsage" #pmu=ngModel placeholder="Max Usage in GB" /> 
     </div>
 
 <div>
     <input type="text" class="form-control" id="spd" name="spd"
-    [(ngModel)]="plan.speed" #spd=ngModel placeholder="Plan Speed" /> 
+    [(ngModel)]="plan.speed" #spd=ngModel placeholder="Plan Speed in Mbps" /> 
   </div>
 
     <div>
@@ -29,7 +30,7 @@
 
 <div>
     <input type="text" class="form-control" id="fup" name="fup"
-    [(ngModel)]="plan.postSpeed" #fup=ngModel placeholder="Post FUP Speed" /> 
+    [(ngModel)]="plan.postSpeed" #fup=ngModel placeholder="Post FUP Speed in Mbps" /> 
   </div>
   <div>
     <input type="text" class="form-control" id="cty" name="cty"
