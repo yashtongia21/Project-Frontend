@@ -32,7 +32,8 @@ const paths: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(paths)
+    RouterModule.forRoot(paths),
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

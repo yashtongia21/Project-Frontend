@@ -1,23 +1,23 @@
+
 <h2>Choose the best according to your requirements:</h2>
 <div>
 
-  <form>
+  <form  class="form" #f="ngForm" novalidate (ngSubmit)="filterByCity()">
 
-    <select class="form-control" name="city">
+    <select class="form-control" name="city" id="city"
+    [(ngModel)]="usercity" #city=ngModel >
       <option value=" " selected="selected">--City--</option>
       <option value="Chennai">Chennai</option>
       <option value="Mumbai">Mumbai</option>
       <option value="Delhi">Delhi</option>
       <option value="Kolkata">Kolkata</option>
     </select>
+    
+    <button class="btn btn-block btn-primary">Filter</button>
 
-    <select class="form-control" name="usageType">
-        <option value=" " selected="selected">--Usage Type--</option>
-        <option value="Home">Home</option>
-        <option value="Business">Business</option>
-        <option value="Office">Office</option>
-        
-      </select>
+    
+   
+
   </form>
 
 </div>
@@ -47,3 +47,4 @@
     </div>
   </div>
 </div>
+

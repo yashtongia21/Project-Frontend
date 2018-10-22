@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Teranet-Frontend';
+  title : string;
+  logoUrl: string;
+  constructor() {
+    this.title="Teranet ISP";
+    this.logoUrl="/assets/images/teranetLogo.png";
+   }
+ 
 }

@@ -28,6 +28,11 @@
     [(ngModel)]="plan.price" #prc=ngModel placeholder="Plan Price" /> 
   </div>
 
+  <div>
+    <input type="text" class="form-control" id="val" name="val"
+    [(ngModel)]="plan.validity" #val=ngModel placeholder="Plan Validity" /> 
+  </div>
+
 <div>
     <input type="text" class="form-control" id="fup" name="fup"
     [(ngModel)]="plan.postSpeed" #fup=ngModel placeholder="Post FUP Speed in Mbps" /> 
@@ -47,3 +52,4 @@
 
 
 </form>
+<h5> This is admin page only admin type users will be allowed to add the plan</h5>
