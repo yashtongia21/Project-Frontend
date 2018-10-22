@@ -10,10 +10,11 @@ import { DisplayPlansComponent } from './component/display-plans/display-plans.c
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { PlanFormComponent } from './component/plan-form/plan-form.component';
 import { PlanDetailsComponent } from './component/plan-details/plan-details.component';
+import { HomeComponent } from './component/home/home.component';
 
 
 const paths: Routes = [
-  { path: '', component: DashboardComponent },
+  { path: '', component: HomeComponent },
   { path: 'listPlans', component: DisplayPlansComponent },
   { path: 'planForm', component: PlanFormComponent },
   {path:'viewPlan/:id',component:PlanDetailsComponent}
@@ -26,7 +27,8 @@ const paths: Routes = [
     DisplayPlansComponent,
     DashboardComponent,
     PlanFormComponent,
-    PlanDetailsComponent
+    PlanDetailsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
